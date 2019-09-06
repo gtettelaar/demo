@@ -1,4 +1,4 @@
 <h2>Hi bob</h2>
-{% for blog in craft.entries.section('blog').limit(2).all() %}
+{% for blog in craft.entries.section('blog').limit(2).orderBy({'id': 'ASC'}).all() %}
     {{ blog.title }}
 {% endfor %}
