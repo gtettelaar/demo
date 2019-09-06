@@ -1,10 +1,10 @@
 <?php
 
-namespace tests;
+namespace happylagertests;
 
 use FunctionalTester;
 
-class TemplateFunctionalTest
+class TemplateFunctionalCest
 {
     // Public methods
     // =========================================================================
@@ -18,7 +18,7 @@ class TemplateFunctionalTest
     public function testTemplate(FunctionalTester $I)
     {
         $I->amOnPage('/blogs');
-        $I->seeInTitle('Blogs');
+        $I->see('Blogs');
         $I->see('Blog article 1');
         $I->see('Blog article 2');
         $I->dontSee('Blog article 3');

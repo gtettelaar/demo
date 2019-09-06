@@ -1,13 +1,12 @@
 <?php
 
-namespace tests;
+namespace happylagertests;
 
 use Codeception\Test\Unit;
 use modules\Module;
 use UnitTester;
-use Craft;
 
-class ModuleTests extends Unit
+class ModuleTest extends Unit
 {
     // Public properties
     // =========================================================================
