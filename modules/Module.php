@@ -2,6 +2,7 @@
 namespace modules;
 
 use Craft;
+use modules\services\Calculator;
 
 /**
  * Custom module class.
@@ -19,6 +20,7 @@ use Craft;
  *
  * Learn more about Yii module development in Yii's documentation:
  * http://www.yiiframework.com/doc-2.0/guide-structure-modules.html
+ * @property Calculator $calculator
  */
 class Module extends \yii\base\Module
 {
@@ -29,7 +31,8 @@ class Module extends \yii\base\Module
     {
         Craft::setAlias('@modules', __DIR__);
         parent::init();
-
-        // Custom initialization code goes here...
+        $this->setComponents([
+            'calculator' => Calculator::class,
+        ]);
     }
 }
